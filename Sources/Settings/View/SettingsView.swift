@@ -12,7 +12,7 @@ var DEVELOPER = "Copyright © Majdi Felah"
 var WEBSITE_LABEL = "www.majdielfelah.co.uk"
 var WEBSITE_LINK = "www.majdielfelah.co.uk"
 
-struct SettingsView: View {
+public struct SettingsView: View {
     @ObservedObject var inAppPurchaseViewModel = InAppPurchaseViewModel()
     @ObservedObject var settingsViewModel = SettingsViewModel()
 
@@ -36,7 +36,9 @@ struct SettingsView: View {
                                                                                mimeType: "text/plain",
                                                                                fileName: "text.txt")])
 
-    var body: some View {
+  public init() {}
+
+  public var body: some View {
         NavigationView {
             List {
                 Section(header: Text("Preferences")) {
